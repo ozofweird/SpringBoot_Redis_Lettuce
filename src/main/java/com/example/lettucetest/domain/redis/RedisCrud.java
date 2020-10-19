@@ -6,12 +6,13 @@ import lombok.ToString;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @ToString
 @Getter
 @RedisHash("redisCrud")
-public class RedisCrud {
+public class RedisCrud implements Serializable {
 
     @Id
     private Long id;
